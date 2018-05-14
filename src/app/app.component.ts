@@ -11,7 +11,7 @@ import { ListPage } from '../pages/list/list';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
+  text: string = '';
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
@@ -40,5 +40,9 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  rightMenuClick(text){
+    this.text = text;
   }
 }
